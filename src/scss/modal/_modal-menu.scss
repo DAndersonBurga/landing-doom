@@ -60,10 +60,12 @@
     }
 
     &__logo {
-        height: 3rem;
-        width: 15rem;
         display: flex;
         align-items: flex-end;
+        svg {
+            height: 5rem;
+            width: 15rem;
+        }
     }
 
     &__nav {

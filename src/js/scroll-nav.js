@@ -4,6 +4,7 @@ const navModal = document.querySelector(".nav-modal");
 const modalMenuContenido = document.querySelector(".modal-menu__contenido");
 
 document.addEventListener("DOMContentLoaded", () => {
+    moverNavModal();
 
     window.addEventListener("scroll", cambiarColorNav);
     window.addEventListener("resize", moverNavModal);
