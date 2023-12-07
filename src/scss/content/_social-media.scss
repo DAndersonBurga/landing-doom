@@ -1,0 +1,43 @@
+@use '../base/variables' as v;
+
+
+.social-media {
+    padding: 0 4.8rem;
+    background-color: v.$black;
+    height: 100px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &__grid {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    &__link {
+        margin: 0 14px;
+        
+        svg {
+            margin: 14px;
+            transition: fill 0.3s ease-in-out;
+            fill: rgb(181, 181, 181);  
+        }
+
+        g {
+            transition: fill 0.3s ease-in-out;
+            fill: rgb(181, 181, 181);  
+        }
+
+        &:hover {
+            svg {
+                fill: v.$secondary;
+            }
+
+            g {
+                fill: v.$secondary;
+            }
+        }
+    }
+}

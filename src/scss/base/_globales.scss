@@ -1,0 +1,62 @@
+@use 'variables' as v;
+
+html {
+    font-size: 62.5%; // 1rem = 10px
+    box-sizing: border-box;
+}
+
+// Truco del almendruco para que el box-sizing: border-box; se aplique a todos los elementos
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    margin: 0 0 2rem 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-size: 3.2rem;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    color: v.$black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.body--scroll-disabled {
+    overflow: hidden;
+}

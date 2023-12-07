@@ -1,0 +1,73 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.hero {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(transparent 80%, rgba(0, 0, 0, 0.3)) center center;
+    background-image: url(public/img/background/doom-960-960.webp);
+    height: 100vh;
+
+    @include m.tablet {
+        background-image: url(public/img/background/doom-3000-1668.webp);
+    }
+
+    @include m.desktopXL {
+        height: calc(100vh - 100px);
+    }
+    min-height: 660px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.trailer-compra {
+    display: flex;
+    position: absolute;
+    z-index: 2;
+    bottom: 2rem;
+    width: 100%;
+    justify-content: center;
+    gap: 1rem;
+    text-transform: uppercase;
+
+    &__button {
+        gap: 1rem;
+        font-size: 1.6rem;
+        font-family: v.$font-primary;
+        font-weight: bold;
+        border-radius: .2rem;
+        background-color: v.$white;
+        padding: 1.7rem .5rem;
+        opacity: 0.9;
+        box-shadow: 2px 2px 4px #9f1700;
+        transition: all .45s ease-in-out;
+
+        g {
+            transition: all .1s ease-in-out;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.85;
+            background-color: #9f1700;
+            color: v.$white;
+            g {
+                fill: v.$white;
+            }
+        }
+
+        @include m.telefono { 
+            padding: 1.7rem 3.5rem;
+        }
+    }
+
+    &__span {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        justify-content: space-between;
+        line-height: 1.4;
+        width: 100%;
+    }
+}

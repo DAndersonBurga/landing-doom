@@ -1,0 +1,19 @@
+@use 'variables' as v;
+
+@mixin boton {
+    padding: 13px 24px;
+    border: 1px solid darken(v.$white, 10%);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-family: v.$font-secondary;
+    font-weight: 600;
+    border-radius: 2px;
+    color: darken(v.$white, 30%);
+    transition: all .3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        border: 2px solid v.$white;
+        color: v.$white;
+    }
+}

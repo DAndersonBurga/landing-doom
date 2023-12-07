@@ -1,0 +1,16 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.container {
+    width: 95%;
+    max-width: 150rem;
+    margin: 0 auto;
+
+    @include m.desktopXL {
+        max-width: 180rem;
+    }
+}
+
+.bg-black {
+    background-color: rgba(32, 32, 32, 0.8);
+}
