@@ -1,12 +1,13 @@
 import { menu } from "./data-menu.js";
+import $ from "./funciones.js";
 
 const body = document.querySelector("body");
 
-const modalMask = document.querySelector(".modal-mask")
-const menuBar = document.querySelector(".header__menu-bar");
-const modalMenu = document.querySelector(".modal-menu");
-const modalMenuContenido = document.querySelector(".modal-menu__contenido");
-const modalMenuClose = document.querySelector(".modal-menu__close");
+const modalMask = $(".modal-mask")
+const menuBar = $(".header__menu-bar");
+const modalMenu = $(".modal-menu");
+const modalMenuContenido = $(".modal-menu__contenido");
+const modalMenuClose = $(".modal-menu__close");
 
 document.addEventListener("DOMContentLoaded", () => {
     menu.forEach(element => {

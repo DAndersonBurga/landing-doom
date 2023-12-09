@@ -197,6 +197,13 @@
       </div> <!-- .Container -->
     </section> <!-- .News Update -->
 
+    <div class="modal-trailer modal-trailer--disabled">
+
+      <div class="modal-trailer__header">
+        <svg class="modal-trailer__close" focusable="false" viewBox="0 0 24 24" aria-hidden="true" aria-label="Cerrar menú de navegación global"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+      </div>
+      <iframe id="iframeTrailer" width="560" height="315" src="https://www.youtube.com/embed/5-_MEAWYWM4?si=3SZHZ48nBRusVCUP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
 
     <!--  Ventana Modal -->
     <div class="modal-mask">
@@ -233,12 +240,15 @@
           </div>
   
           <div class="modal-menu__contenido">
+
           </div> <!-- .Modal-menu__contenido -->
-  
+
         </div>
-      </div>
-    </div>
+      </div> <!-- .Modal-menu -->
+    </div> <!-- .Modal-mask -->
+
     <script type="module" src="/src/js/modal-menu.js"></script>
     <script type="module" src="/src/js/scroll-nav.js"></script>
+    <script type="module" src="/src/js/modal-trailer.js"></script>
   </body>
 </html>

@@ -1,7 +1,9 @@
-const header = document.querySelector(".header");
-const modalMenuNav = document.querySelector(".modal-menu__nav");
-const navModal = document.querySelector(".nav-modal");
-const modalMenuContenido = document.querySelector(".modal-menu__contenido");
+import $ from "./funciones";
+
+const header = $(".header");
+const modalMenuNav = $(".modal-menu__nav");
+const navModal = $(".nav-modal");
+const modalMenuContenido = $(".modal-menu__contenido");
 
 document.addEventListener("DOMContentLoaded", () => {
     moverNavModal();
