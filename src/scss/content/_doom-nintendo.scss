@@ -18,7 +18,7 @@
         display: grid;
         grid-template-columns: 1fr;
 
-        @include m.tablet { 
+        @media (width > 960px) { 
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -73,7 +73,8 @@
         flex-direction: column;
         width: 100%;
         gap: 2rem;
-        @include m.tablet { 
+
+        @media (width > 960px) { 
             flex-direction: row;
         }
     }
@@ -110,7 +111,7 @@
             }
         }
 
-        @include m.tablet { 
+        @media (width > 960px) { 
             margin-bottom: 3rem;
             width: 22rem;
         }
