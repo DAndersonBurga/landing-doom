@@ -18,7 +18,7 @@
         display: grid;
         grid-template-columns: 1fr;
 
-        @media (width > 960px) { 
+        @media (width > 900px) { 
             grid-template-columns: repeat(2, 1fr);
         }
 
@@ -111,7 +111,7 @@
             }
         }
 
-        @media (width > 960px) { 
+        @media (width > 900px) { 
             margin-bottom: 3rem;
             width: 22rem;
         }
