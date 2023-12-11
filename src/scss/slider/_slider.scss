@@ -1,0 +1,205 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+$aumento: 25%;
+
+.slider-mask {
+    position: relative;
+    overflow-x: hidden;
+    background-color: transparent;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+
+    &__buttons {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        z-index: 4;
+        right: 0;
+        top: 50%;
+    }
+
+    &__button {
+        background-color: rgba(51,51,51,0.6);
+        width: 5rem;
+        height: 5rem;
+        z-index: 3;
+        fill: v.$white;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.slider-slide {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    z-index: 1;
+    
+    &--active {
+        cursor: grab;
+        scroll-behavior: auto;
+    }
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    &__progress-content {
+        position: relative;
+        z-index: 3;
+        bottom: 3rem;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        @include m.desktop { 
+            position: absolute;
+            top: 97%;
+            right: 10%;
+            width: 40%;
+        }
+    }
+
+    &__progress-bar {
+        position: absolute;
+        margin: 0 auto;
+        width: 100%;
+        height: .4rem;
+        background-color: #ffffff47;
+        border-radius: 1rem;
+
+        @include m.telefono { 
+            width: 50%;
+        }
+
+        @include m.desktop { 
+            width: 100%;
+        }
+    }
+
+    &__progress {
+        position: absolute;
+        width: 25%;
+        background-color: v.$white;
+        height: .4rem;
+        transition: all .4s ease-in-out;
+    }
+}
+
+.slider {
+    width: 100vw;
+    background-color: v.$gray;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    scroll-snap-align: center;
+    transition: transform .6s ease-in-out;
+
+    &__image {
+        display: block;
+        height: 100%;
+        height: 30rem;
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+
+        @include m.telefono { 
+            height: 40rem;
+            background-size: cover;
+        }
+
+        @media (min-width: 600px) {
+            height: 50rem;
+            background-size: cover;
+            background-position: bottom center;
+        }
+
+        @media (min-width: 700px) {
+            height: 60rem;
+        }
+        
+        @media (min-width: 1024px) {
+            height: 70rem;
+            background-position: 10% center;
+        }
+
+        @include m.desktopXL { 
+            height: 75rem;
+            background-position: 50% center;
+        }
+    }
+
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) &__image {
+            
+            background-image: url(public/img/slider/eternal-slide-#{$i}-small.webp);
+
+            @media (min-width: 1024px) {
+                background-image: url(public/img/slider/eternal-slide-#{$i}.webp);
+            }
+        }
+    }
+    
+    &__content {
+        min-height: 40vh;
+        padding: 0 10vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include m.desktop { 
+            position: absolute;
+            height: 100%;
+            width: 62%;
+        }
+    }
+
+    &__heading {
+        font-family: v.$font-primary;
+        text-transform: uppercase;
+        color: v.$white;
+        padding: 5rem 0 1rem 0;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        text-align: left;
+        font-size: 2.3rem;
+        margin: 0 1rem;
+
+        @media (min-width: 600px) {
+            font-size: 3.8rem;
+        }
+
+        @include m.desktop { 
+            font-size: 4.2rem;
+        }
+    }
+
+    &__texto {
+        color: v.$white;
+        margin: 0 1rem;
+        font-family: v.$font-secondary;
+        font-size: 1.5rem;
+        padding-bottom: 5rem;
+        line-height: 1.6;
+        white-space: pre-line;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        text-align: left;
+
+        @include m.desktop { 
+            padding: 0;
+            font-size: 2rem;
+        }
+    }
+
+    &__container {
+        position: relative;
+        will-change: trasform;
+    }
+}
