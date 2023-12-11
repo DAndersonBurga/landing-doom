@@ -130,7 +130,7 @@ function editionTemplate(edition) {
       </div>
 
       <div class="edition__image-container">
-        <img class="edition__image" src="/public/img/editions/${imagen}" alt="edition image">
+        <img class="edition__image" src="/public/static/img/editions/${imagen}" alt="edition image">
       </div>
 
     </div>

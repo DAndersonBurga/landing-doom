@@ -140,10 +140,10 @@ $aumento: 25%;
     @for $i from 1 through 4 {
         &:nth-child(#{$i}) &__image {
             
-            background-image: url(public/img/slider/eternal-slide-#{$i}-small.webp);
+            background-image: url(/public/static/img/slider/eternal-slide-#{$i}-small.webp);
 
             @media (min-width: 1024px) {
-                background-image: url(public/img/slider/eternal-slide-#{$i}.webp);
+                background-image: url(/public/static/img/slider/eternal-slide-#{$i}.webp);
             }
         }
     }

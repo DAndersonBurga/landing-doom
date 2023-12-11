@@ -5,11 +5,11 @@
     position: relative;
     width: 100%;
     background: linear-gradient(transparent 80%, rgba(0, 0, 0, 0.3)) center center;
-    background-image: url(public/img/background/doom-960-960.webp);
+    background-image: url(/public/static/img/background/doom-960-960.webp);
     height: 100vh;
 
     @include m.tablet {
-        background-image: url(public/img/background/doom-3000-1668.webp);
+        background-image: url(/public/static/img/background/doom-3000-1668.webp);
     }
 
     @include m.desktopXL {
