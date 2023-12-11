@@ -1,0 +1,47 @@
+@use '../base/variables' as v;
+
+.company {
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    &__logo {
+        width: 14rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__grid {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    &__image {
+        height: 12rem;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: .5rem;
+    }
+
+    &__text {
+        font-family: v.$font-secondary;
+        font-size: 1.3rem;
+        font-weight: bold;
+        white-space: nowrap;
+
+        &:last-of-type {
+            border-top: 1px solid v.$white;
+            padding-top: .3rem;
+        }
+    }
+}

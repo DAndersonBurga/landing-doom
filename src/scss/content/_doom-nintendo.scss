@@ -1,0 +1,122 @@
+@use '../base/variables' as v;
+@use '../base/mixins' as m;
+
+.doom-nintendo {
+    background-image: url(/public/img/background/background-switch.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    &__container {
+        padding: 1rem 5rem;
+
+        @include m.tablet { 
+            padding: 5rem 10rem;
+        }
+    }
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @include m.tablet { 
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin: 1rem;
+    }
+
+    &__heading {
+        color: v.$white;
+        font-family: v.$font-primary;
+        font-size: 3rem;
+
+        @include m.tablet { 
+            font-size: 6rem;
+        }
+    }
+
+    &__text {
+        color: v.$white;
+        font-family: v.$font-secondary;
+        line-height: 1.5;
+        margin-bottom: 3rem;
+        font-size: 1.5rem;
+        
+        @include m.tablet { 
+            font-size: 2rem;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__image {
+        height: 50rem;
+        object-fit: contain;
+        
+        @include m.tablet { 
+            height: 60rem;
+        }
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+        @include m.tablet { 
+            flex-direction: row;
+        }
+    }
+
+    &__link {
+        padding: 2rem 1rem;
+        width: 100%;
+        color: v.$white;
+        background-color: transparent;
+        border: 1px solid v.$white;
+        text-transform: uppercase;
+        font-family: v.$font-primary;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin: 0;
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        justify-content: center;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: rgba(255,255,255,0.7);
+            opacity: .87;
+        }
+
+        &--nintendo {
+            border: none;
+            background-color: v.$secondary;
+            
+            &:hover {
+                background-color: v.$secondary;
+                opacity: .8;
+            }
+        }
+
+        @include m.tablet { 
+            margin-bottom: 3rem;
+            width: 22rem;
+        }
+    }
+
+    &__logo {
+        width: 3rem;
+    }
+}

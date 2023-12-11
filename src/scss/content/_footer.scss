@@ -1,0 +1,67 @@
+@use '../base/variables' as v;
+
+.footer {
+    background-color: rgb(29, 29, 29);
+    color: v.$white;
+
+    &__grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0rem;
+        padding: 4vh 5vw;
+        justify-content: space-between;
+
+        @media (width > 600px) {
+            gap: 5%;
+            flex-direction: row;
+        }
+
+        @media (width > 1300px) {
+            gap: 10%;
+        }
+    }
+
+    &__block {
+        flex: 1;
+    }
+
+    &__heading {
+        display: flex;
+        justify-content: flex-start;
+        font-family: v.$font-secondary;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 1.5rem;
+        padding: 1rem 0;
+        border-bottom: 3px solid rgb(46, 46, 46);
+    }
+
+    &__ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-bottom: 1rem;
+
+        @media (width > 600px) {
+            grid-template-columns: 1fr;
+        }
+
+        @media (width > 1300px) {
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 1rem;
+        }
+    }
+
+    &__li {
+        font-family: v.$font-secondary;
+        font-size: 1.4rem;
+        margin-bottom: 1.2rem;
+
+        a {
+            color: #b3b3b3;
+
+            &:hover {
+                color: v.$white;
+            }
+        }
+    }
+}
