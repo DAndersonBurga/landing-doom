@@ -2,8 +2,8 @@
 ![Alt text](./public/static/img/readme/landing-page-doom.png)
 
 ## Links
-### Langing Original: [DOOM Eternal](https://bethesda.net/es/game/doom)
-### Landing Page Vercel: [DOOM SrPromax](https://doom-srpromax.vercel.app/)
+* [DOOM Eternal Original](https://bethesda.net/es/game/doom)
+* [DOOM SrPromax Vercel](https://doom-srpromax.vercel.app/)
 
 
 ## Node JS:
