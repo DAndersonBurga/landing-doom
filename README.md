@@ -4,3 +4,9 @@ ___
 
 ### Langing Original: [DOOM Eternal](https://bethesda.net/es/game/doom)
 ### Landing Page Vercel: [DOOM SrPromax](https://doom-srpromax.vercel.app/)
+
+___
+
+## Node JS:
+1. `npm install`
+2. `npm run dev`
