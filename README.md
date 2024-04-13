@@ -1,4 +1,4 @@
-# Landing Page de Doom by Anderson Burga
+# Landing Page Doom by Anderson Burga
 ![Alt text](./public/static/img/readme/landing-page-doom.png)
 
 ## Links
